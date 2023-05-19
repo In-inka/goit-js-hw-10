@@ -19,7 +19,15 @@ body {
   margin-bottom: 16px;
 }
 
+#search-box:focus {
+  outline-color: rgb(45, 119, 239);
+}
+
 ul {
   list-style: none;
   padding: 0;
+}
+.country-info-title {
+  font-size: 25px;
+  margin-bottom: 15px;
 }

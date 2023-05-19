@@ -40,20 +40,23 @@ function onInputCountry(evt) {
         resetNameCountry();
         const markupInfo = countries
           .map(country => {
-            return `<div>
-            <img src="${country.flags.svg}" alt="${
-              country.name.official
-            }" width = 25>
-            ${country.name.official}
-            </div><div>
-            <b>Capital:</b> ${country.capital}
-          </div>
-          <div>
-            <b>Population:</b> ${country.population}
-          </div>
-          <div>
-            <b>Languages:</b> ${Object.values(country.languages).join(', ')}
-          </div>`;
+            return `<ul>
+            <li class ="country-info-title">
+              <img
+                src="${country.flags.svg}"
+                alt="${country.name.official}"
+                width="25"
+              />
+             <b>${country.name.official}</b>
+            </li>
+            <li ><b>Capital: </b>${country.capital}</li>
+            <li >
+              <b>Population: </b>${country.population}
+            </li>
+            <li ><b>Languages: </b>${Object.values(country.languages).join(
+              ', '
+            )}</li>
+          </ul>`;
           })
           .join('');
         countryInfo.innerHTML = markupInfo;
